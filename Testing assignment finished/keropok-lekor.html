@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keropok-Lekor - Street Food Explorer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Must Add-->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+
+
+<body>
+<!-- Button -->
+<script>
+    function showTab(index) {
+            let tabs = document.querySelectorAll(".tab");
+            let contents = document.querySelectorAll(".tab-content");
+
+            tabs.forEach((tab, i) => {
+                tab.classList.toggle("active", i === index);
+            });
+
+            contents.forEach((content, i) => {
+                content.classList.toggle("active", i === index);
+            });
+        }
+  </script>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">StreetFood Explorer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="favourite.html">Favourites</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- SlideShow-->
+  <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/street.jpg" class="d-block w-100" alt="Street Food 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/street2.jpg" class="d-block w-100" alt="Street Food 2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/street3.jpg" class="d-block w-100" alt="Street Food 3">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+<!--Button2-->
+  <div class="tabs">
+        <div class="tab active" onclick="showTab(0)">Overview</div>
+        <div class="tab" onclick="showTab(1)">Location</div>
+  </div>
+
+
+  
+
+  <!-- Food Intro -->
+  <div class="container py-5">
+    <!--Button3-->
+    <div id="tab-0" class="tab-content active">
+  
+
+    <h1 class="title">Keropok Lekor</h1>
+    <img src="images/keropok-lekor.png" width="2000" height="900" class="d-block w-100 animated-img" alt="Keropok-Lekor">
+    
+    <p class="caption1">
+        Keropok lekor is a traditional Malay fish cracker snack originating from the state of Terengganu, Malaysia 
+    </p> 
+    <p class="caption">
+        It is made from fish and sago flour and seasoned with salt and sugar. 
+        It is slightly greyish and gives off a fishy taste and smell which becomes more prominent as it cools down after frying.
+    </p> 
+    <p class="caption">
+        It is usually made by grinding fish or vegetables into a paste, mixing it with sago, and then deep-frying it. 
+        It comes in three main forms: lekor (long and chewy), rebus (steamed), and keping (thin and crispy).
+    </p> 
+
+  <p class="subtitle2">Like This Food?</p>
+    <button class="btn btn-success save-fav" data-food="Keropok-Lekor">Save to Favourites</button>
+
+    <!-- Click to show recipe -->
+    <div class="mt-4">
+      <h3 class="subtitle2">Recipe</h3>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#recipeSteps">
+        Show Recipe
+      </button>
+      <div class="collapse mt-3" id="recipeSteps">
+        <div class="card card-body">
+          <ol>
+            <li>Clean, remove scales, skin and gut and debone 1 kg Indian mackerels or fresh sardines.</li>
+            <li>Weigh 250 g of the fish flesh and process it with 50 g ice, 3 g salt, 3 g anchovy granules and 
+                3 g baking powder in a food processor.</li>
+            <li>Add in 185 g sago starch a little at a time until all starch is used up and continue processing until a ball is formed.</li>
+            <li>Shape the dough into a 2 cm diameter x 7 cm length logs by rolling them on a flat surface and sprinkling sago 
+                starch all over the surface so that they don’t stick to each other.</li>
+            <li>Drop the dough sticks into 3.5 liters of simmering water.</li>
+            <li>Poach till they float and drain them out.</li>
+            <li>Let cool and deep fry at 150°C until crispy and golden brown.</li>
+            <li>Drain and serve hot with chili sauce.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+<!--Button3-->
+  <div id="tab-1" class="tab-content">
+    <h1 class="title">Recommended Location:</h1>
+    <h2 class="subtitle2">Keropok Warisan Losong </h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1017611.5832673851!2d102.39749461346162!3d4.932085436450804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b7be8ba239b7bd%3A0x4ebe413038668f5c!2sKeropok%20Warisan%20Losong!5e0!3m2!1szh-CN!2smy!4v1756232284567!5m2!1szh-CN!2smy" 
+      width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+    <img class="pict" src="images/locationkl.jpg" alt="Keropok-Lekor" width="1000" height="600" margin="30">
+    <h2 class="subtitle2">Address:</h2>
+    <p class="caption">
+      74, Jalan Kuala Hiliran, Kampung Losong Haji Su, 21000 Kuala Terengganu, Terengganu
+    </p>
+
+  </div>
+
+  <div class="footer-right">
+            <span><strong>FOLLOW US:</strong></span>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Everything.About.Penang/?ref=embed_page#"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/hashtag/BestMalaysianStreetFood?src=hashtag_click"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/malaysiafoodandtravel/?hl=en"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Save to Favorites
+    document.querySelector(".save-fav").addEventListener("click", function() {
+      let food = this.getAttribute("data-food");
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      if (!favorites.includes(food)) {
+        favorites.push(food);
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+        alert(food + " added to Favorites!");
+      } else {
+        alert(food + " is already in Favorites!");
+      }
+    });
+  </script>
+</body>
+</html>

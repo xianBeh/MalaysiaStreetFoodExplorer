@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px black;
+      width: 320px;
+      text-align: center;
+    }
+    h2 { margin-bottom: 20px; }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 25px;
+      background: darkblue;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btn:hover { background: navy; }
+    .link {
+      display: block;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    #errorMsg {
+      color: red;
+      margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+  <div class="box">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Enter Username" required>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <button type="submit" class="btn">Login</button>
+    </form>
+    <p id="errorMsg"></p>
+    <a href="signup.html" class="link">Don’t have an account? Sign up here</a>
+  </div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const errorMsg = document.getElementById("errorMsg");
+
+  let users = JSON.parse(localStorage.getItem("users")) || {};
+
+  if(users[username] && users[username] === password){
+    localStorage.setItem("loggedInUser", username);
+    document.cookie = "username=" + username + "; path=/";
+    window.location.href = "index.html";
+  } else {
+    errorMsg.textContent = "Invalid username or password.";
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roti-Canai - Street Food Explorer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Must Add-->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+
+
+<body>
+<!-- Button -->
+<script>
+    function showTab(index) {
+            let tabs = document.querySelectorAll(".tab");
+            let contents = document.querySelectorAll(".tab-content");
+
+            tabs.forEach((tab, i) => {
+                tab.classList.toggle("active", i === index);
+            });
+
+            contents.forEach((content, i) => {
+                content.classList.toggle("active", i === index);
+            });
+        }
+  </script>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">StreetFood Explorer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="favourite.html">Favourites</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- SlideShow-->
+  <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/street.jpg" class="d-block w-100" alt="Street Food 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/street2.jpg" class="d-block w-100" alt="Street Food 2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/street3.jpg" class="d-block w-100" alt="Street Food 3">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+<!--Button2-->
+  <div class="tabs">
+        <div class="tab active" onclick="showTab(0)">Overview</div>
+        <div class="tab" onclick="showTab(1)">Location</div>
+  </div>
+
+
+  
+
+  <!-- Food Intro -->
+  <div class="container py-5">
+    <!--Button3-->
+    <div id="tab-0" class="tab-content active">
+  
+
+    <h1 class="title">Roti Canai</h1>
+    <img src="images/roti-canai.jpg" width="1500" height="3000" class="d-block w-100 animated-img" alt="Roti-Canai">
+    <h2 class="subtitle1">Roti Canai: A Symbol of Malaysian Identity and Culture</h2>
+    <p class="caption1">
+      Roti Canai is one of Malaysia’s most beloved comfort foods and a staple at mamak stalls (Indian-Muslim eateries).
+    </p>
+    <p class="caption">
+      It’s a type of flatbread made from wheat flour, water, egg, ghee (clarified butter), and a pinch of salt.
+    </p> 
+    <p class="caption">
+      The dough is kneaded, rested, and then stretched until paper-thin before being folded and cooked 
+      on a flat griddle with a little oil or ghee.
+    </p>
+    <p class="caption">
+      The result is a bread that’s crispy on the outside, fluffy and soft on the inside.
+    </p>
+
+  <p class="subtitle2">Like This Food?</p>
+    <button class="btn btn-success save-fav" data-food="Roti-Canai">Save to Favourites</button>
+
+    <!-- Click to show recipe -->
+    <div class="mt-4">
+      <h3 class="subtitle2">Recipe</h3>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#recipeSteps">
+        Show Recipe
+      </button>
+      <div class="collapse mt-3" id="recipeSteps">
+        <div class="card card-body">
+          <ol>
+            <li>In a standing mixer bowl, add in flour, salt, egg, melted butter, condensed milk and water. </li>
+            <li>Mix to incorporate and knead for 10 minutes. </li>
+            <li>Leave to rest for 10 minutes and knead for another 5 minutes.</li>
+            <li>Divide the dough into 10 small balls.</li>
+            <li>Coat each ball generously with unsalted butter and place them in a container that has been generously buttered. </li>
+            <li>Cover the container tightly with cling film and keep in the fridge overnight.</li>
+            <li>Heat some unsalted butter on a pan using medium heat.</li>
+            <li>Place the flatten dough on the pan. Cook for several minutes and then flip.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+<!--Button3-->
+  <div id="tab-1" class="tab-content">
+    <h1 class="title">Recommended Location:</h1>
+    <h2 class="subtitle2">Valentine Roti</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2039780.8869387985!2d101.6685959!3d3.1087126!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37dc56341661%3A0x8ac56f7091428d6c!2sValentine%20Roti!5e0!3m2!1szh-CN!2smy!4v1756229348283!5m2!1szh-CN!2smy" 
+      width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+    <img class="pict" src="images/locationrc.jpg" alt="Roti-Canai" width="1000" height="600" margin="30">
+    <h2 class="subtitle2">Address:</h2>
+    <p class="caption">
+      1, Jalan Sultan Yahya Petra, Kampung Datuk Keramat, 54100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur
+    </p>
+
+  </div>
+
+  <div class="footer-right">
+            <span><strong>FOLLOW US:</strong></span>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Everything.About.Penang/?ref=embed_page#"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/hashtag/BestMalaysianStreetFood?src=hashtag_click"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/malaysiafoodandtravel/?hl=en"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Save to Favorites
+    document.querySelector(".save-fav").addEventListener("click", function() {
+      let food = this.getAttribute("data-food");
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      if (!favorites.includes(food)) {
+        favorites.push(food);
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+        alert(food + " added to Favorites!");
+      } else {
+        alert(food + " is already in Favorites!");
+      }
+    });
+  </script>
+</body>
+</html>

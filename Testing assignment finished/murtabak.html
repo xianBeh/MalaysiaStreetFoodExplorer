@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Murtabak - Street Food Explorer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Must Add-->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+
+
+<body>
+<!-- Button -->
+<script>
+    function showTab(index) {
+            let tabs = document.querySelectorAll(".tab");
+            let contents = document.querySelectorAll(".tab-content");
+
+            tabs.forEach((tab, i) => {
+                tab.classList.toggle("active", i === index);
+            });
+
+            contents.forEach((content, i) => {
+                content.classList.toggle("active", i === index);
+            });
+        }
+  </script>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">StreetFood Explorer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="favourite.html">Favourites</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- SlideShow-->
+  <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/street.jpg" class="d-block w-100" alt="Street Food 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/street2.jpg" class="d-block w-100" alt="Street Food 2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/street3.jpg" class="d-block w-100" alt="Street Food 3">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+<!--Button2-->
+  <div class="tabs">
+        <div class="tab active" onclick="showTab(0)">Overview</div>
+        <div class="tab" onclick="showTab(1)">Location</div>
+  </div>
+
+
+  
+
+  <!-- Food Intro -->
+  <div class="container py-5">
+    <!--Button3-->
+    <div id="tab-0" class="tab-content active">
+  
+
+    <h1 class="title">Murtabak</h1>
+    <img src="images/murtabak.jpg" width="2000" height="900" class="d-block w-100 animated-img" alt="Murtabak">
+    
+    <p class="caption1">
+     Murtabak, or mutabbaq is a Yemeni stuffed pancake or pan-fried bread commonly found in the Arabian Peninsula, 
+     the Indian subcontinent, and Southeast Asia, notably in Saudi Arabia, Yemen, Indonesia, Malaysia, Singapore, Brunei, 
+     and Southern Thailand
+    
+    </p> 
+    <p class="caption">
+     Depending on the location, the name and ingredients can vary significantly. The name mutabbaq means "folded" in Arabic
+    </p> 
+
+    <p class="caption">
+        Murtabak is often described as a spicy folded omelette or pancake with bits of vegetables.[4] Its most common form is made from pan-fried crepes, 
+        usually stuffed with beaten eggs, chopped leeks, chives, or green onion, and minced meat, which is then folded and cut into squares.
+    </p>
+
+    <p class="caption">
+        In Malaysia, murtabak was originally sold in mamak stalls, and usually includes minced meat (beef or chicken, 
+        sometimes goat meat or mutton) along with garlic, egg, and onion, and is eaten with curry, sliced cucumber, syrup-pickled onions, or tomato sauce.
+    </p>
+
+  <p class="subtitle2">Like This Food?</p>
+    <button class="btn btn-success save-fav" data-food="Murtabak">Save to Favourites</button>
+
+    <!-- Click to show recipe -->
+    <div class="mt-4">
+      <h3 class="subtitle2">Recipe</h3>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#recipeSteps">
+        Show Recipe
+      </button>
+      <div class="collapse mt-3" id="recipeSteps">
+        <div class="card card-body">
+          <ol>
+            <li>How to prepare the dough:
+                Melt the ghee and add to the flour sifted with salt. Rub the shortening into the flour.</li>
+            <li>Beat the egg and add to the flour-ghee mixture.</li>
+            <li>Mix soda bicarbonate with water. Gradually add to the flour mixture and knead to a dough. 
+                Grease the dough with a teaspoon of melted ghee and let it rest for 45 minutes in a bowl covered with a damp towel.</li>
+            <li>How to make the filling:
+                Heat a pan with peanut oil and add the onion. Sauté for 2 minutes. Add the ground lamb, minced ginger and garlic and sauté for another minute. 
+                Add the spices and salt and cook with ¼ cup of water on medium heat for 25 minutes or until the water has evaporated. 
+                Stir occasionally while cooking the ground lamb
+            </li>
+            <li>How to assemble the Murtabak using my recipe:
+                Divide the dough into four balls. Knead and stretch it for 3-4 minutes. Roll each ball into a thin crepe. 
+                Spoon some of the ground lamb filling in the center and top with onions and cilantro.
+            </li>
+            <li>Spoon a quarter of the beaten egg on top.</li>
+            <li>Fold the edges of the crepe over the filling and seal it like an envelope by overlapping each end over the other. 
+                Seal the edges by pressing down at the ends.</li>
+            <li>On low to medium heat, place each murtabak on a griddle and cook for 2-3 minutes on each side or until golden brown on both sides.</li>
+            <li>Cut the murtabak into squares or halves and garnish with cilantro and chopped shallot. Serve hot with curry or by itself.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+<!--Button3-->
+  <div id="tab-1" class="tab-content">
+    <h1 class="title">Recommended Location:</h1>
+    <h2 class="subtitle2">Murtabak Majid Special Cheese No. 1 </h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1021044.1967370772!2d103.7584657!3d1.4984718!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da6d168626eb7b%3A0x990a443dd183f8f!2sMurtabak%20Majid%20Special%20Cheese%20No.%201!5e0!3m2!1szh-CN!2smy!4v1756278757523!5m2!1szh-CN!2smy" 
+      width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+    <img class="pict" src="images/locationmtb.jpg" alt="Cendol Dessert" width="1000" height="600" margin="30">
+    <h2 class="subtitle2">Address:</h2>
+    <p class="caption">
+      38 Lot, 5581, Jalan Kurniawan, Kampung Kurnia, 80250 Johor Bahru, Johor Darul Ta'zim
+    </p>
+
+  </div>
+
+  <div class="footer-right">
+            <span><strong>FOLLOW US:</strong></span>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Everything.About.Penang/?ref=embed_page#"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/hashtag/BestMalaysianStreetFood?src=hashtag_click"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/malaysiafoodandtravel/?hl=en"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Save to Favorites
+    document.querySelector(".save-fav").addEventListener("click", function() {
+      let food = this.getAttribute("data-food");
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      if (!favorites.includes(food)) {
+        favorites.push(food);
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+        alert(food + " added to Favorites!");
+      } else {
+        alert(food + " is already in Favorites!");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysian Street Food News</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: #393939;
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 3rem;
+            color: #ffffff;
+        }
+        .header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .flip-cards-section {
+            margin: 40px 0;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+        }
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 500px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s ease-in-out;
+            transform-style: preserve-3d;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .flip-card-front {
+            background: white;
+            color: white;
+        }
+        .flip-card-back {
+            background: black;
+            color: white;
+            transform: rotateY(180deg);
+            text-align: left;
+            padding: 25px;
+            overflow-y: auto;
+        }
+        .food-image {
+            width: 100%;
+            height: 250px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+        .card-title-front {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            line-height: 1.0;
+            color: #000000;
+            text-align: justify;
+        }
+         .card-title-back {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            line-height: 1.0;
+            color: #ffffff;
+            text-align: justify;
+        }
+        .card-subtitle {
+            font-size:0.9rem;
+            line-height: 1.0;
+            margin-bottom: 10px;
+            color: #000000;
+            text-align: justify;
+        }
+        .card-content {
+            font-size: 1.0rem;
+            line-height: 1.0;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .flip-card:hover {
+            transform: translateX(5px);
+        }
+        .news-source {
+            margin-top: 15px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #534c3a;
+            text-align: center;
+        }
+        .random-source {
+            margin-top: 15px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #9d9d9d;
+            text-align: center;
+        }
+        .footer {
+            background:#393939;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Malaysian Street Food News</h1>
+            <p>Discover the latest updates on Malaysia's vibrant street food scene and rich cultural heritage</p>
+        </header>
+        <section class="flip-cards-section">
+            <div class="cards-grid">
+                <div class="flip-card" onclick="window.open('https://www.straitstimes.com/asia/se-asia/penang-crowns-new-char-kway-teow-champion', '_blank');">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="flipimg/Flip1.jpeg" alt="Char Kway Teow" class="food-image">
+                            <h3 class="card-title-front">Penang Crowns New Char Kway Teow Champion</h3>
+                            <p class="card-subtitle"> GEORGE TOWN – It was a fiery showdown as 30 of Penang’s top char kway teow sellers competed over roaring flames for the cove­ted title of the state’s best.
+                                The intense cook-off on June 1, aimed at uncovering the finest char kway teow and ultimate wok hei (smoky aroma), saw contes­tants battling it out with their secret recipes.</p>
+                            <p class="news-source">Source: The Straits Times</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 class="card-title-back">Penang History</h3>
+                            <p class="card-content">Penang, known as the "Pearl of the Orient," was established in 1786 by Captain Francis Light of the British East India Company. It became the first British settlement in Southeast Asia and quickly grew into a major trading post.</p>
+                            <p class="card-content">George Town, the capital city, was declared a UNESCO World Heritage Site in 2008 for its unique architectural and cultural townscape. The island is famous for its diverse cuisine, blending Malay, Chinese, Indian, and European influences.</p>
+                            <p class="random-source">Source: Wikipedia</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card" onclick="window.open('https://www.nst.com.my/lifestyle/jom/2023/01/866678/jom-eat-malaysian-cuisine-ranked-worlds-39th-best', '_blank');">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="flipimg/Flip2.jpg" alt="Food Ranking" class="food-image">
+                            <h3 class="card-title-front">Malaysian cuisine ranked as the world's 39th best</h3>
+                            <p class="card-subtitle">Malaysian cuisine is ranked as the 39th best cuisine in the world, out of 95 countries in the TasteAtlas Award 2022 list, beating neighbouring Singapore, which sits at number 52.
+                                Other neighbours — Indonesia and Thailand — are ranked at 16th and 30th, respectively. 
+                                With an average rating of 4.72, Italian cuisine tops the list, followed by Greek, Spanish, Japanese and Indian cuisine.</p>
+                            <p class="news-source">Source: The Straits Times</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 class="card-title-back">Malaysian Cuisine</h3>
+                            <p class="card-content">Malaysian cuisine is a vibrant blend of Malay, Chinese, and Indian culinary traditions, characterized by its use of spices, coconut milk, and complex flavors.</p>
+                            <p class="card-content">Key dishes include the national favorite Nasi Lemak (rice cooked in coconut milk), Roti Canai (flatbread), Satay (grilled skewers), and various Laksa noodle soups.</p>
+                             <p class="random-source">Source: Your Food Travel Agency</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card" onclick="window.open('https://www.straitstimes.com/life/food/food-picks-kitchenman-nasi-lemak-serves-up-malaysian-kampung-soul-with-a-chefs-touch', '_blank');">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="flipimg/Flip3.jpeg" alt="Nasi Lemak" class="food-image">
+                            <h3 class="card-title-front">Kitchenman Nasi Lemak serves up Malaysian kampung soul with a chef’s touch</h3>
+                            <p class="card-subtitle">Rendang Chicken is a much-sought after dish at Kitchenman Nasi Lemak. 
+                                Lemongrass, galangal, ginger and shallots are blended for the rempah. The dry version that Mr Cheow prepares is exacting to cook, 
+                                as it takes three hours of minding the fire and constant stirring to prevent the richly spiced gravy from burning.</p>
+                            <p class="news-source">Source: The Straits Times</p>
+                        </div>
+                         <div class="flip-card-back">
+                            <h3 class="card-title-back">Historic Malaysian Dishes</h3>
+                            <p class="card-content">Malaysian cuisine consists of cooking traditions and practices found in Malaysia, and reflects the multi-ethnic makeup of its population. The vast majority of Malaysia's population can be divided among three major ethnic groups: Malays, Chinese and Indians.</p>
+                            <p class="card-content">Malaysia historical dishes include Nasi Lemak, the national dish of coconut rice; Rendang, 
+                                slow-cooked meat with spices from Minangkabau culture; Laksa, a spicy noodle soup with Malay and Chinese influences; 
+                                Char Kway Teow, stir-fried rice noodles brought by Chinese migrants; and Roti Canai, a flatbread influenced by Indian traders.</p>
+                            <p class="random-source">Source: Science Meets Food</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>&copy; 2025 Explore Street Food. All rights reserved.</p>
+            <p>This page is for educational purposes only. All news content belongs to The Straits Times.</p>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.flip-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    console.log('Card clicked, redirecting to news article');
+                });
+            });
+                if (!sessionStorage.getItem('firstVisit')) {
+                sessionStorage.setItem('firstVisit', '1');
+                console.log('First time visitor - welcome!');
+            } else {
+                console.log('Returning visitor - welcome back!');
+            }
+        });
+    </script>
+</body>
+</html>

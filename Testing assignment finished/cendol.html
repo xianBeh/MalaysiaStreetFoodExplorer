@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cendol - Street Food Explorer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Must Add-->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+
+
+<body>
+<!-- Button -->
+<script>
+    function showTab(index) {
+            let tabs = document.querySelectorAll(".tab");
+            let contents = document.querySelectorAll(".tab-content");
+
+            tabs.forEach((tab, i) => {
+                tab.classList.toggle("active", i === index);
+            });
+
+            contents.forEach((content, i) => {
+                content.classList.toggle("active", i === index);
+            });
+        }
+  </script>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">StreetFood Explorer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="favourite.html">Favourites</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- SlideShow-->
+  <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/street.jpg" class="d-block w-100" alt="Street Food 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/street2.jpg" class="d-block w-100" alt="Street Food 2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/street3.jpg" class="d-block w-100" alt="Street Food 3">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+<!--Button2-->
+  <div class="tabs">
+        <div class="tab active" onclick="showTab(0)">Overview</div>
+        <div class="tab" onclick="showTab(1)">Location</div>
+  </div>
+
+
+  
+
+  <!-- Food Intro -->
+  <div class="container py-5">
+    <!--Button3-->
+    <div id="tab-0" class="tab-content active">
+  
+
+    <h1 class="title">Cendol</h1>
+    <img src="images/cendol2.jpg" width="2000" height="900" class="d-block w-100 animated-img" alt="Cendol">
+    <h2 class="subtitle1">Cendol Is the Signature Sweet of Malaysia</h2>
+    <p class="caption">
+      Cendol is a famous traditional dessert in Southeast Asia, especially popular in Malaysia, Indonesia, and Singapore. 
+
+      It’s a refreshing treat, perfect for hot weather, and is well-loved for its unique mix of flavors and textures.
+    
+    </p> 
+
+  <p class="subtitle2">Like This Food?</p>
+    <button class="btn btn-success save-fav" data-food="Cendol">Save to Favourites</button>
+
+    <!-- Click to show recipe -->
+    <div class="mt-4">
+      <h3 class="subtitle2">Recipe</h3>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#recipeSteps">
+        Show Recipe
+      </button>
+      <div class="collapse mt-3" id="recipeSteps">
+        <div class="card card-body">
+          <ol>
+            <li>Mix rice flour and sago flour, then mix it with some of the water.</li>
+            <li>Boil the rest of the water, add green pandan leaves water and salt.</li>
+            <li>Put the flour mixtures into the boiled water.</li>
+            <li>Stir well and cook until it thickens (paste-like).</li>
+            <li>Drain with special cendol strain (usually the strainer has round holes),
+               so when we press the cendol mixture it will go out of the strain as roundish short cendol.</li>
+            <li>Put these cendol directly into a bowl with water and ice in it.</li>
+            <li>Cendol will be solid and then drain them again. Set aside.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+<!--Button3-->
+  <div id="tab-1" class="tab-content">
+    <h1 class="title">Recommended Location:</h1>
+    <h2 class="subtitle2">Cendol Kampung Hulu </h2>
+    <iframe 
+      src="https://www.google.com/maps?q=26+Jalan+Kampung+Hulu+Melaka&output=embed" 
+      width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+    <img class="pict" src="images/locationc.jpg" alt="Cendol Dessert" width="1000" height="600" margin="30">
+    <h2 class="subtitle2">Address:</h2>
+    <p class="caption">
+      No 26, Jalan Kampung Hulu, 75200 Melaka, Malaysia
+    </p>
+
+  </div>
+
+  <div class="footer-right">
+            <span><strong>FOLLOW US:</strong></span>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Everything.About.Penang/?ref=embed_page#"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/hashtag/BestMalaysianStreetFood?src=hashtag_click"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/malaysiafoodandtravel/?hl=en"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Save to Favorites
+    document.querySelector(".save-fav").addEventListener("click", function() {
+      let food = this.getAttribute("data-food");
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      if (!favorites.includes(food)) {
+        favorites.push(food);
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+        alert(food + " added to Favorites!");
+      } else {
+        alert(food + " is already in Favorites!");
+      }
+    });
+  </script>
+</body>
+</html>

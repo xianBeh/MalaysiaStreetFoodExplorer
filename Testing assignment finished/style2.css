@@ -1,0 +1,237 @@
+.navbar {
+  background: linear-gradient(90deg, #b8b1b1, #3b3b3b); /* subtle gradient */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* soft shadow */
+  padding: 0.8rem 2rem;
+}
+
+
+
+/* Brand Logo Text */
+.navbar-brand {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: "DM Serif Text", serif;
+  color: #f8f9fa !important;
+  letter-spacing: 2px;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05); /* gentle zoom */
+  color: #e2c13d !important; /* highlight color */
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+
+  font-size: 1.8rem;
+  font-family: "DM Serif Text";
+  font-weight: 500;
+  color: #f8f9fa !important;
+  margin-left: 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline Animation */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  font-family: "DM Serif Text";
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #ffcc00;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffcc00 !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+#bannerCarousel img {
+  height: calc(100vw * 9 / 16); /* keep same ratio */
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.title{
+    font-family: "DM Serif Text";
+    text-align: center;
+    font-size: 5rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 60px; /* Gap between title and picture */
+    animation: fadeInDown 1.2s ease-out;
+         
+}
+
+
+.subtitle1{
+    font-family: "DM Serif Text";
+    text-align: center;
+      font-size: 5rem;
+      margin-top: 20px;
+      font-weight: 500;
+      margin-bottom: 150px;
+      font-weight: bold;
+      animation: fadeInUp 1.5s ease-out;
+}
+
+.subtitle2{
+    font-family: "DM Serif Text";
+    text-align: left;
+      font-size: 3rem;
+      margin-top: 50px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      font-weight: bold;
+      animation: fadeInUp 1.5s ease-out;
+}
+
+.caption1{
+    font-family: "DM Serif Text";
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+.caption{
+    font-family: "DM Serif Text";
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.collapse mt-3{
+    font-family: "DM Serif Text";
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+video {
+  margin-bottom: 30px;
+}
+
+.animated-img {
+      display: block;
+      margin: 0 auto;
+      width: 1000px;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 10px;
+      animation: zoomIn 1.55s ease-in-out;
+    }
+
+    /* Keyframes for animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #ddd;
+  margin: 20px 0;
+  font-family: "DM Serif Text";
+  font-size: 2rem;
+}
+
+.tab {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+  transition: 0.3s;
+  font-family: "DM Serif Text";
+  font-size: 2rem;
+}
+
+.tab:hover {
+  color: #007bff;
+  font-family: "DM Serif Text";
+  font-size: 2rem;
+}
+
+.tab.active {
+  border-bottom: 3px solid #007bff;
+  font-weight: bold;
+  color: #007bff;
+  font-family: "DM Serif Text";
+  font-size: 2rem;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px 0;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+img {
+  transition: transform 0.3s ease; /* smooth animation */
+  cursor: pointer; 
+}
+
+img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.pict{
+
+  margin-top: 40px;
+}
+
+footer 
+{
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #444;
+}
+
+.footer-center 
+{
+  flex: 1;
+  text-align: center;
+}
+
+.footer-right 
+{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer p 
+{
+  font-family:'Poppins', sans-serif;
+  font-size: 14px;
+  color: black;
+}
